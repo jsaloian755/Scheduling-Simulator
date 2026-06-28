@@ -22,15 +22,6 @@ class Simulator:
             if p.arrival_time == self.time:
                 self.ready_queue.append(p)
     
-    # helper to just choose first process (will later be replaced by sched algorithms)
-    def select_proc(self):
-        # check that there are ready processes
-        if len(self.ready_queue) == 0:
-            return None
-        
-        # return first process in ready queue
-        return self.ready_queue[0]
-
     # helper to execute a single time step for a given process
     def exec_proc(self, proc):
         # set start time if necessary
